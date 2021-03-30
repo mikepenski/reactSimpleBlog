@@ -15,6 +15,11 @@ const Card = (props) => {
                        {title}
                     </h5>
 
+                    {published_date}
+                    {author}
+                    {description}
+                    {title}
+
                     <a href="#" className="btn btn-outline-primary read-more">Read more</a>
 
                 </div>
