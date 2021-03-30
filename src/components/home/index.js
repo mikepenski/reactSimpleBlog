@@ -5,7 +5,7 @@ const Home = (props) => {
     return <section className="home">
 
                 <div className="hero-container">
-                    <img src={Headerimage} className="hero" />
+                    <img src={Headerimage} className="hero" alt="heroImage" />
                 </div>
 
 
@@ -13,7 +13,7 @@ const Home = (props) => {
                
                     <h1>Welcome to my simple Blog</h1>
 
-                    <a href="#" className="btn btn-outline-primary read-more">Read more</a>
+                    <a href="/" className="btn btn-outline-primary read-more">Read more</a>
 
                 </div>
            </section>
