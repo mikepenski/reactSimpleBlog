@@ -3,15 +3,13 @@ import './assets/css/style.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import blogData from './components/blog/data.js';
 import Header from './components/header/header';
 import Home from './components/home/index';
 import Blog from './components/blog/index';
-
 
 function App() {
   return (
