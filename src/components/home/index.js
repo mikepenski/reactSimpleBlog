@@ -13,7 +13,7 @@ const Home = (props) => {
                
                     <h1>Welcome to my simple Blog</h1>
 
-                    <a href="/" className="btn btn-outline-primary read-more">Read more</a>
+                    <a href="/blog" className="btn btn-outline-primary read-more">Read more</a>
 
                 </div>
            </section>

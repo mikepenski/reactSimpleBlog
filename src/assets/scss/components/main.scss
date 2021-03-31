@@ -48,3 +48,21 @@ p{
         }
     }
 }
+
+.post{
+    .image-container{
+    height: 650px;
+    @include media-breakpoint-down(md){
+        height: 350px;
+    }
+       position: relative;
+       img{
+        position: absolute;
+        right: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+       }
+    }
+}
+

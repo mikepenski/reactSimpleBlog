@@ -8,6 +8,7 @@ const Blog = (props) => {
                     <div className="row">
 
                         {props.data.map((item, index) => {
+                            
                             return  <Col key={index + "col"} class="col-12 col-md-4 mb-4 px-md-4">
                                 <Card key={index} data={item} />
                             </Col>
