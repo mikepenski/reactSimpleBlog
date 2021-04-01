@@ -38,7 +38,7 @@ $primary:                       #0d4625;
 $primary-light:                 #d6e7f3;
 $secondary:                     #0B5286;
 
-$link-color:                    $secondary;
+$link-color:                    $primary;
 
 $gray-100:                      #fafafa;
 $gray-200:                      #ECEDEF;
@@ -87,3 +87,10 @@ $custom-control-indicator-checked-color: $primary;
 $custom-control-indicator-size: 1.56rem;
 
 $pagewrapper: 2000px;
+
+
+
+// change the theme
+$theme-colors: (
+  "primary": #0d4625
+);

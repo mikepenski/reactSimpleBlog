@@ -9,9 +9,13 @@ header{
         justify-content: space-between;
         padding: 3rem;
         .logo{
-            font-size: 2rem;
-            color: $primary;
-            font-weight: 900;
+            a{
+                &.navbar-brand{
+                    font-size: 2rem;
+                    color: $primary;
+                    font-weight: 900;
+                }
+            }
         }
         nav ul li{
             display: inline-block;
