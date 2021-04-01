@@ -22,8 +22,21 @@ const Card = (props) => {
                        {title}
                     </h5>
 
-                    <Link to={"/post/" + id} key={title} className="btn btn-outline-primary read-more">Read more</Link>
-    
+                    {/*
+                  <Link to={"/post/" + id} key={title} className="btn btn-outline-primary read-more">Read more</Link>
+
+                    */}
+
+<Link
+  to={{
+    pathname: "/post/" + id,
+    state: props.data // your data array of objects
+  }}
+>
+Read more
+</Link>
+
+
                 </div>
              
            </div>

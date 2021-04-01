@@ -23,8 +23,7 @@ class App extends React.Component {
   
   state = {
     headerPaddingTop: '',
-    width: 0,
-    height: 0
+    blogPosts: blogData
   }
   
   componentDidMount(){
@@ -46,6 +45,7 @@ class App extends React.Component {
     document.body.style.paddingTop = header_height + "px";
 
   }
+
 
   /*
   componentWillUnmount() {
@@ -71,37 +71,53 @@ class App extends React.Component {
             </Route>
 
             <Route path="/blog">
-              <Blog data={blogData} />
+              <Blog data={blogData} passedFunction={this.test} />
+            </Route>
+
+            <Route
+            path='/post/:id'
+            render={(props) => (
+              <Post {...props} data={this.state.blogPosts} singleBlogPost={true} />
+              )}  
+              />
+
+
+            {/*
+
+            
+            <Post data={this.state.blogPosts} singleBlogPost={true}  />
+
+            
+            <Route
+            path='/post/:id'
+            render={(props) => (
+              <Post {...props} data={this.state.blogPosts} showSearch={true} />
+              )}  
+              />
+
+
+                        <Post data={this.state.blogPosts} />
+
+
+
+                      <Route
+            path='/post/:id'
+            render={(props) => (
+              <Post {...props} data={this.state.blogPosts} onClick={(e) => this.test(props.id)} />
+              )}  
+              />
+
+                   <Route path="/post/:id" onClick={(e) => this.test(params.id)}>
+
+              <Post data={this.state.blogPosts} />
+
             </Route>
 
 
-            <Route path="/post/:id" component={Post} />
+              <Route path="/post/:id" component={Post} />
+            */}
 
-            
-              {/*
-
-
-              
-
-                   <Route exact path="/post/:id" render={({match}) => (
-                <Post post={blogData.find(p => p.id === match.params.id)} />
-                 )} />
-
-                <Route path="/post/:id" render={(blogData) => <Post {...blogData} />} />
-
-
-
-                <Route exact path="/post/:id" render={({match}) => (
-                <Post post={blogData.find(p => p.id === match.params.id)} />
-              )} />
-
-
-                 <Post data={blogData} />
-                 <Post post={posts.find(p => p.id === match.params.id)} />
-              */}
-
-       
-        
+    
             <Route component={TheNotFoundPage} />
 
           </Switch>

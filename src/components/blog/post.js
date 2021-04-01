@@ -10,17 +10,15 @@ import Container from 'react-bootstrap/Container'
 import blogData from '../blog/data';
 
 
-const Post = ({props})=> {
+const Post = (props)=> {
 
     let history = useHistory();
 
     const { id } = useParams()
 
-    let data = blogData[id];
-
     if(id <= blogData.length){
 
-        const { title, published_date, author, description, img_url } = data;
+        const { title, published_date, author, description, img_url } = props.data[id];
 
         return <div className="post">
 
