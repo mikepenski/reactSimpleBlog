@@ -1,5 +1,4 @@
 import {
-    Link,
     useParams,
   } from "react-router-dom";
 
@@ -21,7 +20,7 @@ const Post = ({props})=> {
 
     if(id <= blogData.length){
 
-        const { postID, title, published_date, author, description, img_url } = data;
+        const { title, published_date, author, description, img_url } = data;
 
         return <div className="post">
 
@@ -32,7 +31,7 @@ const Post = ({props})=> {
             <button onClick={history.goBack} className="btn btn-link mb-4">{"< back"}</button>
 
                 <div className="image-container mb-6">
-                  <img src={img_url} className="mb-4" />
+                  <img src={img_url} className="mb-4" alt={title} />
                 </div>
                
             </div>

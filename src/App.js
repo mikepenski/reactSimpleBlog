@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
 import './assets/css/style.css';
 
 import {
@@ -16,17 +14,8 @@ import blogData from './components/blog/data.js';
 import Header from './components/header/header';
 import Home from './components/home/index';
 import Blog from './components/blog/index';
-import Card from './components/cards/card';
 import Post from './components/blog/post';
 import TheNotFoundPage from './components/global/404';
-
-
-
-function BlogPost() {
-  let { id } = useParams();
-  return <div>Now showing post {id}</div>;
-}
-
 
 
 class App extends React.Component {
@@ -85,7 +74,7 @@ class App extends React.Component {
             </Route>
 
 
-            <Route path="/post/:id" component={Post} data={blogData} />
+            <Route path="/post/:id" component={Post} />
 
             
               {/*
