@@ -2,25 +2,22 @@ import {
     useParams,
   } from "react-router-dom";
 
-
 import { useHistory } from "react-router-dom";
-
 import Container from 'react-bootstrap/Container'
-
 import blogData from '../blog/data';
-
 
 const Post = (props)=> {
 
     let history = useHistory();
-
-    const { id } = useParams()
+    const { id } = useParams();
+    
+    const post= props.getPost(id);
 
     if(id <= blogData.length){
 
-        const { title, published_date, author, description, img_url } = props.data[id];
+        const { title, published_date, author, description, img_url } = post;
 
-        return <div className="post">
+        return <div className="post pb-5">
 
         <div className="row">
 
@@ -48,7 +45,7 @@ const Post = (props)=> {
 
            </div>
 
-            <p>{description}</p>
+            <p className="py-3">{description}</p>
 
              By {author}
 
@@ -63,7 +60,7 @@ const Post = (props)=> {
                         No Post Found
                   </Container>
                  </div>
-    }
+    } 
 
     }
   
